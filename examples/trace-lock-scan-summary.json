@@ -1,0 +1,29 @@
+{
+  "scan_id": "TL-2026-01-21-0001",
+  "window_utc": "2026-01-21T15:00:00Z/2026-01-21T15:30:00Z",
+  "domains": {
+    "wifi": {"observations": 214, "alerts": 2},
+    "ble": {"observations": 156, "alerts": 1},
+    "sdr": {"observations": 48, "alerts": 0},
+    "gps": {"observations": 12, "alerts": 0},
+    "adsb": {"observations": 6, "alerts": 0}
+  },
+  "detections": [
+    {
+      "id": "DL-WIFI-001",
+      "severity": "medium",
+      "summary": "Rogue AP pattern detected (beacon mismatch)",
+      "action": "Verify authorized SSID inventory"
+    },
+    {
+      "id": "DL-BLE-004",
+      "severity": "low",
+      "summary": "Unexpected BLE density spike",
+      "action": "Confirm expected device baseline"
+    }
+  ],
+  "integrity": {
+    "manifest": "manifest.json",
+    "hash": "sha256:REDACTED"
+  }
+}
