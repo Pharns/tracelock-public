@@ -43,6 +43,34 @@ sequenceDiagram
   Store-->>Report: Summary + findings
 ```
 
+## Detection Categories (High-Level)
+- **Baseline drift**: density spikes, time-of-day anomalies, out-of-pattern device classes
+- **Rogue infrastructure**: beacon mismatches, duplicate identifiers, unexpected SSID profiles
+- **Signal health**: RF noise shifts, spectrum saturation events, GPS quality anomalies
+- **Proximity context**: ADS-B activity correlated to local RF changes
+
+## Evidence Schema (Redacted)
+Fields used in structured logs (values are redacted or synthetic in public artifacts):
+
+| Field | Type | Purpose |
+| --- | --- | --- |
+| `scan_id` | string | Unique run identifier |
+| `window_utc` | string | Capture time range |
+| `domain` | string | wifi, ble, sdr, gps, adsb |
+| `observation_count` | number | Volume summary |
+| `alert_count` | number | Detection count |
+| `summary` | string | Human-readable finding |
+| `severity` | string | low, medium, high |
+| `action` | string | Recommended next step |
+| `integrity` | object | Hashes + manifest pointer |
+
+## Governance Workflow (Defensive)
+1. Capture passive observations within authorized scope.
+2. Normalize and log with integrity metadata.
+3. Correlate signals across domains to reduce false positives.
+4. Produce a short, decision-ready report with recommended actions.
+5. Update baselines and document outcomes for auditability.
+
 ## Example Outputs (Synthetic)
 - `examples/trace-lock-scan-summary.json`
 - `examples/detection-report.md`
@@ -57,6 +85,11 @@ This public overview mirrors a private repo with automated workflows:
 - Defensive-only, passive observation
 - No jamming, no interference, no device targeting
 - No real device identifiers or addresses in public artifacts
+
+## Redaction Policy
+- No MACs, SSIDs, GPS coordinates, or device IDs.
+- No operational timelines tied to real locations.
+- No implementation details that enable active interference.
 
 ## Disclaimer
 This is a public-safe overview. Do not use as a production system. No sensitive data or operational details are included.
