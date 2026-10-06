@@ -1,11 +1,6 @@
 # TraceLock - Multi-Domain RF Threat Detection (Public Overview)
 
-![Status](https://img.shields.io/badge/status-public--safe-brightgreen)
-![Scope](https://img.shields.io/badge/scope-redacted-blue)
-![License](https://img.shields.io/badge/license-proprietary-lightgrey)
-![CI/CD](https://img.shields.io/badge/ci%2Fcd-implemented-informational)
-![Governance](https://img.shields.io/badge/governance-evidence--grade-blue)
-![Defensive](https://img.shields.io/badge/use-defensive--only-brightgreen)
+> **Built by Pharns Genece.** WGU BSCSIA capstone, patent-pending (TraceLock™). Passive detection across six RF domains (Wi-Fi · BLE · SDR · GPS · ADS-B · ISM) with evidence-grade logging. Project page: [portfolio.pharns.com/cybersecurity/tracelock](https://portfolio.pharns.com/cybersecurity/tracelock/)
 
 TraceLock is a defensive, passive RF telemetry platform for multi-domain wireless awareness. This public repository is a redacted overview that demonstrates detection engineering and evidence-grade logging without exposing sensitive methods or operational details.
 
@@ -97,3 +92,12 @@ This public overview mirrors a private repo with automated workflows:
 
 ## Disclaimer
 This is a public-safe overview. Do not use as a production system. No sensitive data or operational details are included.
+
+## Repository Status
+
+![Status](https://img.shields.io/badge/status-public--safe-brightgreen)
+![Scope](https://img.shields.io/badge/scope-redacted-blue)
+![License](https://img.shields.io/badge/license-proprietary-lightgrey)
+![CI/CD](https://img.shields.io/badge/ci%2Fcd-implemented-informational)
+![Governance](https://img.shields.io/badge/governance-evidence--grade-blue)
+![Defensive](https://img.shields.io/badge/use-defensive--only-brightgreen)
