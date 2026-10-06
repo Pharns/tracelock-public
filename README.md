@@ -10,7 +10,7 @@
 TraceLock is a defensive, passive RF telemetry platform for multi-domain wireless awareness. This public repository is a redacted overview that demonstrates detection engineering and evidence-grade logging without exposing sensitive methods or operational details.
 
 ## What This Is
-- Passive signal observation across Wi-Fi, BLE, SDR, GPS, and ADS-B
+- Passive signal observation across six domains: Wi-Fi, BLE, SDR, GPS, ADS-B, and ISM
 - Evidence-grade logging with integrity checks and structured outputs
 - Detection engineering focused on correlation, not active interference
 
@@ -20,6 +20,7 @@ TraceLock is a defensive, passive RF telemetry platform for multi-domain wireles
 - SDR (wideband spectrum context)
 - GPS (signal quality anomalies)
 - ADS-B (aircraft proximity context)
+- ISM (sub-GHz device telemetry — sensors, remotes, tire-pressure monitors)
 
 ## High-Level Architecture (Redacted)
 
@@ -58,7 +59,7 @@ Fields used in structured logs (values are redacted or synthetic in public artif
 | --- | --- | --- |
 | `scan_id` | string | Unique run identifier |
 | `window_utc` | string | Capture time range |
-| `domain` | string | wifi, ble, sdr, gps, adsb |
+| `domain` | string | wifi, ble, sdr, gps, adsb, ism |
 | `observation_count` | number | Volume summary |
 | `alert_count` | number | Detection count |
 | `summary` | string | Human-readable finding |
